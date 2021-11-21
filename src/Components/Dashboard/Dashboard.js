@@ -91,7 +91,7 @@ const Dashboard = ({ themeHandler, themeToggler }) => {
         <div className={classes.toolbar} />
         {musicInfo.error && getRecentPlay.error && (
           <>
-            {/* <h1>{`You Broken It ! ${musicInfo.error.message}`}</h1> */}
+            { <h1>{`You Broken It ! ${musicInfo.error.message}`}</h1> }
             <Alert severity='error'>{musicInfo.error.message} </Alert>
           </>
         )}
@@ -130,12 +130,12 @@ const Dashboard = ({ themeHandler, themeToggler }) => {
               />
             )}
 
-//             {state === 'Mood Enhancer' && (
-//               <PlaylistGenerator
-//                 cardClickHandler={cardClickHandler}
-//                 getPlayList={getPlayList}
-//               />
-//             )}
+             {state === 'Mood Enhancer' && (
+                 <PlaylistGenerator
+                    cardClickHandler={cardClickHandler}
+                  getPlayList={getPlayList}
+               />
+             )}
             {state === 'Your Library' && <YourLib />}
             {state === 'Recent Played' && (
               <RecentPlayed
